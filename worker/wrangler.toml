@@ -1,0 +1,24 @@
+name = "binance-futures-alert-worker"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare 1-minute Cron Trigger for 24/7 background alert monitoring
+[triggers]
+crons = ["* * * * *"]
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "binance_alerts_db"
+database_id = "YOUR_D1_DATABASE_ID" # Run: npx wrangler d1 create binance_alerts_db and paste the ID here
+
+# Environment Variables
+[vars]
+ENVIRONMENT = "production"
+ALLOWED_ORIGIN = "*" # Or set to your frontend domain: e.g. https://your-app.vercel.app
+
+# Secrets to set via `npx wrangler secret put <KEY>`:
+# - FIREBASE_PROJECT_ID
+# - FIREBASE_CLIENT_EMAIL
+# - FIREBASE_PRIVATE_KEY

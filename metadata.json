@@ -1,0 +1,6 @@
+{
+  "name": "Binance Futures TradingView Pro",
+  "description": "Ultra-responsive TradingView-style cryptocurrency charting interface for Binance USDT-Margined Futures with Last/Mark/Index switcher, custom timeframes, bar replay mode, local price alerts, and live multi-tab watchlist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
